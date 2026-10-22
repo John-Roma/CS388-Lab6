@@ -82,6 +82,7 @@ class CampgroundFragment : Fragment() {
                         json.jsonObject.toString()
                     )
                     parsedJson.data?.let { list ->
+                        campgrounds.clear()
                         campgrounds.addAll(list)
                         campgroundAdapter.notifyDataSetChanged()
                     }
